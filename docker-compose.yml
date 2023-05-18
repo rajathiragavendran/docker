@@ -1,0 +1,32 @@
+---
+version: '3.8'
+services:
+  myjenkins:
+    image: jenkins/jenkins
+    ports:
+      - 7070:8080
+    networks:
+      - xyz
+  qaserver:
+    image: tomcat
+    ports:
+      - 6060:8080
+
+  prodserver:
+    image: tomcat
+    ports:
+      - 5050:8080
+  
+  myubuntu:
+    build: .
+    volumes:
+      - mydata:/tmp
+
+volumes:
+  mydata:
+
+networks:
+  xyz: {}
+  default:
+    external:
+      name: mynetwork

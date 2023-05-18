@@ -7,4 +7,4 @@ RUN apt-get install -y ansible
 RUN apt-get install -y git
 RUN apt-get install -y maven
 RUN apt-get install -y tree
-copy jenkins.war /
+copy addimage /

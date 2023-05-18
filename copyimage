@@ -1,0 +1,6 @@
+FROM ubuntu
+MAINTAINER raji
+
+COPY ansibleimage /
+
+RUN 

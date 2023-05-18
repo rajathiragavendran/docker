@@ -1,0 +1,7 @@
+FROM jenkins/jenkins
+MAINTAINER raji
+
+USER root
+copy addimage
+RUN apt-get update
+RUN apt-get install -y git maven
